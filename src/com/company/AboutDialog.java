@@ -53,19 +53,11 @@ public abstract class AboutDialog extends JDialog {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 checker(0, familia);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
                 checker(0, familia);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
@@ -78,19 +70,11 @@ public abstract class AboutDialog extends JDialog {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 checker(1,name);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
                 checker(1,name);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
@@ -103,19 +87,11 @@ public abstract class AboutDialog extends JDialog {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 checker(2,rang);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
                 checker(2,rang);
-                if(check[0] && check[1] && check[2])
-                    ok.setEnabled(true);
-                else
-                    ok.setEnabled(false);
             }
 
             @Override
@@ -157,7 +133,7 @@ public abstract class AboutDialog extends JDialog {
                 .put(KeyStroke.getKeyStroke("released ENTER"), "press");
     }
 
-    private void checker(int i, JTextField field){
+    protected void checker(int i, JTextField field){
         Pattern r = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,16}$");
         Matcher m = r.matcher(field.getText());
         if (m.matches()) {
@@ -168,5 +144,9 @@ public abstract class AboutDialog extends JDialog {
             field.setBorder(BorderFactory.createLineBorder(Color.RED));
             check[i] = false;
         }
+        if(check[0] && check[1] && check[2])
+            ok.setEnabled(true);
+        else
+            ok.setEnabled(false);
     }
 }
