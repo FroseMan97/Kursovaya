@@ -1,7 +1,11 @@
 package com.company;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Абстрактный класс Диалогового окна Добавления/Редактирования данных сотрудников
@@ -10,6 +14,7 @@ public abstract class AboutDialog extends JDialog {
     protected JTextField familia;
     protected JTextField name;
     protected JTextField rang;
+    protected Boolean[] check = {false,false,false};
     private JButton ok = new JButton("Принять");
     private JButton cancel = new JButton("Закрыть");
     private JLabel famLab = new JLabel("Фамилия");
@@ -39,7 +44,86 @@ public abstract class AboutDialog extends JDialog {
      */
     public AboutDialog(JFrame owner, employs parent, String title) {
         super(owner, title, true);
+        ok.setEnabled(false);
+        // Инит кнопок
         init(parent);
+
+        // Создание валидатора полей
+        familia.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checker(0, familia);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checker(0, familia);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+
+            }
+        });
+
+        name.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checker(1,name);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checker(1,name);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+
+            }
+        });
+
+        rang.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checker(2,rang);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checker(2,rang);
+                if(check[0] && check[1] && check[2])
+                    ok.setEnabled(true);
+                else
+                    ok.setEnabled(false);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+
+            }
+        });
+
         ok.addActionListener((e) -> progress(parent));
         cancel.addActionListener((e) -> dispose());
         JPanel mainp = new JPanel();
@@ -71,5 +155,18 @@ public abstract class AboutDialog extends JDialog {
 // retarget the binding for released
         this.getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("released ENTER"), "press");
+    }
+
+    private void checker(int i, JTextField field){
+        Pattern r = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,16}$");
+        Matcher m = r.matcher(field.getText());
+        if (m.matches()) {
+            field.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+            check[i] = true;
+        }
+        else {
+            field.setBorder(BorderFactory.createLineBorder(Color.RED));
+            check[i] = false;
+        }
     }
 }
