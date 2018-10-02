@@ -2,8 +2,6 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Абстрактный класс Диалогового окна Добавления/Редактирования данных сотрудников
@@ -20,36 +18,30 @@ public abstract class AboutDialog extends JDialog {
 
     /**
      * Выполнение манипуляций с данными
+     *
      * @param parent Объект класса приложения
      */
-    public abstract void  progress(employs parent);
+    public abstract void progress(employs parent);
 
     /**
      * Инициализация
+     *
      * @param parent Объект класса приложения
      */
     public abstract void init(employs parent);
 
     /**
      * Основной конструктор
-     * @param owner JFrame приложения
+     *
+     * @param owner  JFrame приложения
      * @param parent Объект класса приложения
-     * @param title Title окна
+     * @param title  Title окна
      */
     public AboutDialog(JFrame owner, employs parent, String title) {
         super(owner, title, true);
         init(parent);
-        ok.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                progress(parent);
-            }
-        });
-        cancel.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        ok.addActionListener((e) -> progress(parent));
+        cancel.addActionListener((e) -> dispose());
         JPanel mainp = new JPanel();
 
         JPanel panel = new JPanel();

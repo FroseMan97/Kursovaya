@@ -40,5 +40,6 @@ public class Main {
         window.setSize(400,380);
         window.setLocation(500,200);
         window.setVisible(true);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

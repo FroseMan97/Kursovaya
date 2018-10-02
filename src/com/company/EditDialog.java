@@ -31,6 +31,7 @@ public class EditDialog extends AboutDialog{
         familia = new JTextField(parent.dataEmploy.getValueAt(row, 0).toString(), 20);
         name = new JTextField(parent.dataEmploy.getValueAt(row, 1).toString(), 20);
         rang = new JTextField(parent.dataEmploy.getValueAt(row, 2).toString(), 20);
+
     }
 
     public EditDialog(JFrame owner, employs parent, String title){
