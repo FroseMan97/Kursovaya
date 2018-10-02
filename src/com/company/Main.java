@@ -22,6 +22,7 @@ public class Main {
 
         prodWindow.addActionListener((e) -> new products());
         employWindow.addActionListener((e) -> new employs());
+        refWindow.addActionListener((e) -> new ref(window,"Справка"));
        // window.setLayout(new FlowLayout());
         JPanel mainp = new JPanel();
 

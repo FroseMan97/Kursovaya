@@ -81,12 +81,12 @@ public class products {
         print = new JButton("Печать",new ImageIcon("./img/print.png"));
 
         // Настройка подсказок
-        add.setToolTipText("Добавить информацию о сотрудниках");
-        delete.setToolTipText("Удалить информацию о сотрудниках");
-        edit.setToolTipText("Изменить информацию о сотрудниках");
-        save.setToolTipText("Сохранить информацию о сотрудниках");
-        folder.setToolTipText("Загрузить информацию о сотрудниках");
-        print.setToolTipText("Распечатать информацию о сотрудниках");
+        add.setToolTipText("Добавить информацию о товаре");
+        delete.setToolTipText("Удалить информацию о товаре");
+        edit.setToolTipText("Изменить информацию о товаре");
+        save.setToolTipText("Сохранить информацию о товарах");
+        folder.setToolTipText("Загрузить информацию о товарах");
+        print.setToolTipText("Распечатать информацию о товарах");
         // Добавление кнопок на панель инструментов
         toolBar = new JToolBar("Панель инструментов");
         toolBar.add(add);
