@@ -445,3 +445,33 @@
 [DEBUG] 2018-10-02 13:45:16 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
 [DEBUG] 2018-10-02 13:45:16 [AWT-EventQueue-0] employs, 396 - Старт Add listener
 [WARN ] 2018-10-02 13:45:20 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-10-03 23:32:13 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-10-03 23:32:14 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-10-04 00:06:46 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-10-04 00:06:48 [AWT-EventQueue-0] employs, 537 - Старт Folder listener
+[DEBUG] 2018-10-04 00:06:53 [AWT-EventQueue-0] employs, 465 - Старт Edit listener
+[INFO ] 2018-10-04 00:06:53 [AWT-EventQueue-0] employs, 468 - Ожидание завершения 1 потока
+[DEBUG] 2018-10-04 00:07:01 [Thread-8] EditDialog, 29 - Старт метода Init
+[DEBUG] 2018-10-04 00:07:17 [AWT-EventQueue-0] employs, 404 - Старт Delete listener
+[DEBUG] 2018-10-04 00:07:19 [AWT-EventQueue-0] AddDialog, 28 - Старт метода init
+[DEBUG] 2018-10-04 00:07:34 [AWT-EventQueue-0] AddDialog, 17 - Старт метода progress
+[WARN ] 2018-10-04 00:07:34 [AWT-EventQueue-0] AddDialog, 20 - Попытка добавить запись  Петров Алексей Продавец
+[INFO ] 2018-10-04 00:07:34 [AWT-EventQueue-0] AddDialog, 22 - Добавлена запись  Петров Алексей Продавец
+[DEBUG] 2018-10-04 00:07:41 [AWT-EventQueue-0] employs, 563 - Запуск нового поиска по ключевому слову: алексей
+[DEBUG] 2018-10-04 00:07:45 [AWT-EventQueue-0] employs, 404 - Старт Delete listener
+[DEBUG] 2018-10-04 00:07:47 [AWT-EventQueue-0] employs, 565 - Сброс ключевого слова поиска
+[WARN ] 2018-10-04 00:07:50 [AWT-EventQueue-0] employs, 434 - Закрытие приложения

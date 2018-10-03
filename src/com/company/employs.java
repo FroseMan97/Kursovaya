@@ -393,8 +393,8 @@ public class employs {
         // Слушатели
 
 
-            log.debug("Старт Add listener");
-                    add.addActionListener((e) -> {
+        log.debug("Старт Add listener");
+        add.addActionListener((e) -> {
             dialogAdd = new AddDialog(window, employs.this, "Добавление записи");
             dialogAdd.setVisible(true);
         });
