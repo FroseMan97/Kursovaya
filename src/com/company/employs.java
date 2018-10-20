@@ -86,11 +86,11 @@ public class employs {
     /**
      * Диалоговое окно редактирования данных
      */
-    private EditDialog dialog;
+    private EditDialogEmploy dialog;
     /**
      * Диалоговое окно добавления данных
      */
-    private AddDialog dialogAdd;
+    private AddDialogEmploy dialogAdd;
 
     /**
      * Поток 1 отвечает за загрузку данных из XML-файла в экранную форму
@@ -285,15 +285,12 @@ public class employs {
                     model.addRow(new String[]{familia, name, rang});
                 }
             }
-            else
-                JOptionPane.showMessageDialog(null,"Вы не выбрали файл");
         }
         catch (ParserConfigurationException e){e.printStackTrace();}
         // Обработка ошибки парсера при чтении данных из XML-файла
         catch (SAXException e){e.printStackTrace();}
         catch (IOException e){e.printStackTrace();}
     }
-
 
     /**
      *      Метод отображения окна
@@ -395,7 +392,7 @@ public class employs {
 
         log.debug("Старт Add listener");
         add.addActionListener((e) -> {
-            dialogAdd = new AddDialog(window, employs.this, "Добавление записи");
+            dialogAdd = new AddDialogEmploy(window, employs.this, "Добавление записи");
             dialogAdd.setVisible(true);
         });
 
@@ -478,7 +475,7 @@ public class employs {
                 if (dataEmploy.getSelectedRow() != -1) {
                     t2 = new Thread(() -> {
                         JOptionPane.showMessageDialog(null,"2 поток запущен");
-                        dialog = new EditDialog(window, employs.this, "Редактирование");
+                        dialog = new EditDialogEmploy(window, employs.this, "Редактирование");
                         dialog.setVisible(true);
                         try {
                             Thread.sleep(5000);
@@ -597,5 +594,4 @@ public class employs {
     public void addR(String[] arr){
         model.addRow(arr);
     }
-
 }

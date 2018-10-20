@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+<dataProducts name="Яблоки" country="Польша" weight="1" price="90"/>
+<dataProducts name="Зимаков" country="Николай" weight="Юрист" price="90"/>
+<dataProducts name="Юстус" country="Анастасия" weight="Старший оператор" price="90"/>
+<dataProducts name="Резникова" country="Анастасия" weight="Продавец" price="90"/>
+<dataProducts name="Старостин" country="Александр" weight="Водитель" price="90"/>
+<dataProducts name="Иванова" country="Мария" weight="Оператор" price="90"/>
+<dataProducts name="Васильев" country="Глеб" weight="Продавец" price="90"/>
+<dataProducts name="Гарщинцева" country="Любовь" weight="Бухгалтер" price="90"/>
+<dataProducts name="Даниленко" country="Владлен" weight="Вебмастер" price="90"/>
+<dataProducts name="Копылова" country="Александра" weight="Заведущийотделом" price="90"/>
+<dataProducts name="Сискович" country="Тамара" weight="Пекарь" price="90"/>
+<dataProducts name="Окружнов" country="Андрей" weight="Связь с общественностью" price="90"/>
+<dataProducts name="Аладышева" country="Анна" weight="Товаровед" price="90"/>
+<dataProducts name="Михайлов" country="Александр" weight="Охранник" price="90"/>
+<dataProducts name="Гребенщиков" country="Михаил" weight="Охранник" price="90"/>
+<dataProducts name="Береснева" country="Лидия" weight="Продавец" price="90"/>
+<dataProducts name="Малышев" country="Алексей" weight="Продавец" price="90"/>
+</window>

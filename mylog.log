@@ -475,3 +475,70 @@
 [DEBUG] 2018-10-04 00:07:45 [AWT-EventQueue-0] employs, 404 - Старт Delete listener
 [DEBUG] 2018-10-04 00:07:47 [AWT-EventQueue-0] employs, 565 - Сброс ключевого слова поиска
 [WARN ] 2018-10-04 00:07:50 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-10-04 00:13:47 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-10-04 00:13:49 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-10-04 00:18:38 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-10-04 00:18:40 [AWT-EventQueue-0] employs, 537 - Старт Folder listener
+[DEBUG] 2018-10-04 00:18:49 [AWT-EventQueue-0] employs, 563 - Запуск нового поиска по ключевому слову: зимако
+[DEBUG] 2018-10-04 00:18:51 [AWT-EventQueue-0] employs, 563 - Запуск нового поиска по ключевому слову: зимако
+[DEBUG] 2018-10-04 00:19:02 [AWT-EventQueue-0] employs, 465 - Старт Edit listener
+[DEBUG] 2018-10-04 00:19:05 [Thread-8] EditDialog, 29 - Старт метода Init
+[WARN ] 2018-10-04 00:19:16 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-10-04 00:59:26 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-10-04 00:59:27 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-10-04 00:59:27 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-10-04 00:59:29 [AWT-EventQueue-0] employs, 537 - Старт Folder listener
+[DEBUG] 2018-10-04 00:59:41 [AWT-EventQueue-0] employs, 565 - Сброс ключевого слова поиска
+[WARN ] 2018-10-04 00:59:50 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 302 - Старт App.show
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 303 - Создание окна приложения
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 309 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 325 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 334 - Размещение панели инструментов
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 338 - Создание таблицы с данными
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 368 - Подготовка компонентов поиска
+[DEBUG] 2018-10-20 20:03:13 [AWT-EventQueue-0] employs, 393 - Старт Add listener
+[WARN ] 2018-10-20 20:03:16 [AWT-EventQueue-0] employs, 534 - Старт Folder listener
+[DEBUG] 2018-10-20 20:03:28 [AWT-EventQueue-0] employs, 462 - Старт Edit listener
+[DEBUG] 2018-10-20 20:03:29 [Thread-4] EditDialogEmploy, 29 - Старт метода Init
+[DEBUG] 2018-10-20 20:03:31 [AWT-EventQueue-0] EditDialogEmploy, 15 - Старт метода progress
+[WARN ] 2018-10-20 20:03:31 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
+[INFO ] 2018-10-20 20:03:31 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
+[DEBUG] 2018-10-20 20:03:38 [AWT-EventQueue-0] employs, 500 - Старт Save listener
+[WARN ] 2018-10-20 20:04:05 [AWT-EventQueue-0] employs, 431 - Закрытие приложения
+[WARN ] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 302 - Старт App.show
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 303 - Создание окна приложения
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 309 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 325 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 334 - Размещение панели инструментов
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 338 - Создание таблицы с данными
+[DEBUG] 2018-10-20 20:06:15 [AWT-EventQueue-0] employs, 368 - Подготовка компонентов поиска
+[DEBUG] 2018-10-20 20:06:16 [AWT-EventQueue-0] employs, 393 - Старт Add listener
+[WARN ] 2018-10-20 20:06:17 [AWT-EventQueue-0] employs, 534 - Старт Folder listener
+[DEBUG] 2018-10-20 20:06:22 [AWT-EventQueue-0] employs, 462 - Старт Edit listener
+[INFO ] 2018-10-20 20:06:22 [AWT-EventQueue-0] employs, 465 - Ожидание завершения 1 потока
+[DEBUG] 2018-10-20 20:06:30 [Thread-4] EditDialogEmploy, 29 - Старт метода Init
+[DEBUG] 2018-10-20 20:06:31 [AWT-EventQueue-0] EditDialogEmploy, 15 - Старт метода progress
+[WARN ] 2018-10-20 20:06:31 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
+[INFO ] 2018-10-20 20:06:31 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
+[DEBUG] 2018-10-20 20:06:33 [AWT-EventQueue-0] employs, 500 - Старт Save listener
+[WARN ] 2018-10-20 20:06:48 [AWT-EventQueue-0] employs, 431 - Закрытие приложения

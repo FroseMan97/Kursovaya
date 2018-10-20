@@ -21,7 +21,7 @@ import java.io.IOException;
 
 public class products {
 
-    private void makeXml() {
+    protected void makeXml() {
         try {
             // Создание парсера документа
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -60,7 +60,7 @@ public class products {
         }
     }
 
-    private void loadXML(){
+    protected void loadXML(){
         try{
             // Создание парсера документа
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -160,6 +160,9 @@ public class products {
      */
     private JScrollPane scroll;
 
+    private AddDialogProd addDialogProd;
+    private EditDialogProd editDialogProd;
+
     Thread t1 = new Thread();
     Thread t2 = new Thread();
     Thread t3 = new Thread();
@@ -245,8 +248,8 @@ public class products {
         window.add(searchPanel,BorderLayout.SOUTH);
 
         add.addActionListener((e) -> {
-            //dialogAdd = new AddDialog(window, employs.this, "Добавление записи");
-            //dialogAdd.setVisible(true);
+            addDialogProd = new AddDialogProd(window, products.this, "Добавление записи");
+            addDialogProd.setVisible(true);
         });
 
         add.setMnemonic(KeyEvent.VK_A);
@@ -283,14 +286,8 @@ public class products {
                 if (dataProducts.getSelectedRow() != -1) {
                     t2 = new Thread(() -> {
                         JOptionPane.showMessageDialog(null,"2 поток запущен");
-                        //dialog = new EditDialog(window, employs.this, "Редактирование");
-                        // dialog.setVisible(true);
-                        try {
-                            Thread.sleep(5000);
-
-                        } catch (InterruptedException ex) {
-                            ex.printStackTrace();
-                        }
+                        editDialogProd = new EditDialogProd(window, products.this, "Редактирование");
+                        editDialogProd.setVisible(true);
                     });
                     t2.start();
                 } else {
@@ -312,35 +309,16 @@ public class products {
             }
             if (model.getRowCount() != 0) {
                 t3 = new Thread(() -> {
-                    try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException ex) {
-                        ex.printStackTrace();
-                    }
-                    //print("dataProducts.xml", "window/dataProducts", "Cherry.jrxml", "otchet.html");
+                    makeXml();
                 });
                 t3.start();
             }
-
-            //makeXml();
-            // print("dataProducts.xml","window/dataProducts","Cherry.jrxml","otchet.html");
-                /*
-               try{ checkList();}
-               catch (MyException myEx){
-                   JOptionPane.showMessageDialog(null,myEx.getMessage());
-               }
-               */
         });
 
         folder.addActionListener((e) -> {
             t1 = new Thread(() -> {
                 loadXML();
                 dataProducts.setRowSelectionInterval(0,0);
-                try {
-                    Thread.sleep(6000);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                }
                 SwingUtilities.invokeLater(() -> {
                     JOptionPane.showMessageDialog(window, "1 поток закончил работу.");
                 });
@@ -374,6 +352,9 @@ public class products {
         });
 
         window.setVisible(true);
+    }
+    public void addR(String[] arr){
+        model.addRow(arr);
     }
 
 }

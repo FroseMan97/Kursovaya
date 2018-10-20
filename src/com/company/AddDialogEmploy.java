@@ -7,11 +7,11 @@ import javax.swing.*;
 /**
  * Класс окна Добавления данных
  */
-public class AddDialog extends AboutDialog {
+public class AddDialogEmploy extends DialogEmploy {
     /**
-     * Логгер класса AddDialog
+     * Логгер класса AddDialogEmploy
      */
-    private static final Logger log = Logger.getLogger(AddDialog.class);
+    private static final Logger log = Logger.getLogger(AddDialogEmploy.class);
     @Override
     public void progress(employs parent) {
         log.debug("Старт метода progress");
@@ -31,7 +31,7 @@ public class AddDialog extends AboutDialog {
        rang = new JTextField(20);
     }
 
-    public AddDialog(JFrame owner, employs parent, String title){
+    public AddDialogEmploy(JFrame owner, employs parent, String title){
         super(owner,parent,title);
     }
 }

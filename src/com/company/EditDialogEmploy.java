@@ -4,11 +4,11 @@ import org.apache.log4j.Logger;
 
 import javax.swing.*;
 
-public class EditDialog extends AboutDialog{
+public class EditDialogEmploy extends DialogEmploy {
     /**
-     * Логгер класса EditDialog
+     * Логгер класса EditDialogEmploy
      */
-    private static final Logger log = Logger.getLogger(EditDialog.class);
+    private static final Logger log = Logger.getLogger(EditDialogEmploy.class);
 
     @Override
     public void progress(employs parent) {
@@ -36,7 +36,7 @@ public class EditDialog extends AboutDialog{
         checker(2,rang);
     }
 
-    public EditDialog(JFrame owner, employs parent, String title){
+    public EditDialogEmploy(JFrame owner, employs parent, String title){
         super(owner,parent, title);
     };
 }

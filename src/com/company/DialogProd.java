@@ -7,74 +7,43 @@ import java.awt.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Абстрактный класс Диалогового окна Добавления/Редактирования данных сотрудников
- */
-public abstract class AboutDialog extends JDialog {
-    protected JTextField familia;
+
+public abstract class DialogProd extends JDialog {
     protected JTextField name;
-    protected JTextField rang;
-    protected Boolean[] check = {false,false,false};
+    protected JTextField country;
+    protected JTextField weight;
+    protected JTextField price;
+    protected Boolean[] check = {false,false,false,false};
     private JButton ok = new JButton("Принять");
     private JButton cancel = new JButton("Закрыть");
-    private JLabel famLab = new JLabel("Фамилия");
-    private JLabel namLab = new JLabel("Имя");
-    private JLabel ranLab = new JLabel("Должность");
+    private JLabel nameLab = new JLabel("Название");
+    private JLabel countryLab = new JLabel("Страна производитель");
+    private JLabel weightLab = new JLabel("Вес");
+    private JLabel priceLab = new JLabel("Цена");
 
-    /**
-     * Выполнение манипуляций с данными
-     *
-     * @param parent Объект класса приложения
-     */
-    public abstract void progress(employs parent);
 
-    /**
-     * Инициализация
-     *
-     * @param parent Объект класса приложения
-     */
-    public abstract void init(employs parent);
+    public abstract void progress(products parent);
 
-    /**
-     * Основной конструктор
-     *
-     * @param owner  JFrame приложения
-     * @param parent Объект класса приложения
-     * @param title  Title окна
-     */
-    public AboutDialog(JFrame owner, employs parent, String title) {
+
+    public abstract void init(products parent);
+
+
+    public DialogProd(JFrame owner, products parent, String title) {
         super(owner, title, true);
         ok.setEnabled(false);
         // Инит кнопок
         init(parent);
 
         // Создание валидатора полей
-        familia.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                checker(0, familia);
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                checker(0, familia);
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-
-            }
-        });
-
         name.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                checker(1,name);
+                checker(0, name);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                checker(1,name);
+                checker(0, name);
             }
 
             @Override
@@ -83,20 +52,52 @@ public abstract class AboutDialog extends JDialog {
             }
         });
 
-        rang.getDocument().addDocumentListener(new DocumentListener() {
+        country.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                checker(2,rang);
+                checker(1,country);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                checker(2,rang);
+                checker(1,country);
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
 
+            }
+        });
+
+        weight.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checker(2,weight);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checker(2,weight);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+            }
+        });
+
+        price.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checker(3,price);
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checker(3,price);
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
             }
         });
 
@@ -105,17 +106,19 @@ public abstract class AboutDialog extends JDialog {
         JPanel mainp = new JPanel();
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(3, 2, 2, 2));
+        panel.setLayout(new GridLayout(4, 2, 2, 2));
 
-        panel.setSize(300, 100);
+        panel.setSize(300, 150);
 
         // adds to the GridLayout
-        panel.add(famLab);
-        panel.add(familia);
-        panel.add(namLab);
+        panel.add(nameLab);
         panel.add(name);
-        panel.add(ranLab);
-        panel.add(rang);
+        panel.add(countryLab);
+        panel.add(country);
+        panel.add(weightLab);
+        panel.add(weight);
+        panel.add(priceLab);
+        panel.add(price);
         mainp.add(panel);
         add(BorderLayout.CENTER, mainp);
         JPanel but = new JPanel();
@@ -123,7 +126,7 @@ public abstract class AboutDialog extends JDialog {
         but.add(cancel);
         add(BorderLayout.SOUTH, but);
         setLocation(500, 250);
-        setSize(500, 155);
+        setSize(500, 165);
         this.getRootPane().setDefaultButton(ok);
 // remove the binding for pressed
         this.getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
@@ -134,17 +137,22 @@ public abstract class AboutDialog extends JDialog {
     }
 
     protected void checker(int i, JTextField field){
-        Pattern r = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,16}$");
-        Matcher m = r.matcher(field.getText());
-        if (m.matches()) {
+        Pattern r = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,10}$");
+        Pattern c = Pattern.compile("^[+-]?(([1-9][0-9]*)|(0))([.,][0-9]+)?$");
+        Matcher rm = c.matcher(field.getText());
+        if(i==3 | i==4) {
+            rm = c.matcher(field.getText());
+        }
+
+        if (rm.matches()) {
             field.setBorder(BorderFactory.createLineBorder(Color.GREEN));
             check[i] = true;
-        }
-        else {
+        } else {
             field.setBorder(BorderFactory.createLineBorder(Color.RED));
             check[i] = false;
         }
-        if(check[0] && check[1] && check[2])
+
+        if (check[0] && check[1] && check[2] && check[3])
             ok.setEnabled(true);
         else
             ok.setEnabled(false);
