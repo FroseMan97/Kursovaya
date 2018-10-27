@@ -460,55 +460,56 @@ public class employs {
 
         edit.addActionListener((e)-> {
             log.debug("Старт Edit listener");
-            if (t1.isAlive()) {
-                try {
-                    log.info("Ожидание завершения 1 потока");
-                    JOptionPane.showMessageDialog(window, "Ждем, пока отработает 1 поток");
-                    t1.join();
-                    JOptionPane.showMessageDialog(window, "1 поток отработал, пробуем запустить 2 поток");
-                } catch (InterruptedException ex) {
-                    log.fatal("Join doesn't work");
-                    ex.printStackTrace();
-                }
-            }
-            if (model.getRowCount() != 0) {
-                if (dataEmploy.getSelectedRow() != -1) {
                     t2 = new Thread(() -> {
-                        JOptionPane.showMessageDialog(null,"2 поток запущен");
-                        dialog = new EditDialogEmploy(window, employs.this, "Редактирование");
-                        dialog.setVisible(true);
-                        try {
-                            Thread.sleep(5000);
+                        if (t1.isAlive()) {
+                            try {
+                                log.info("Ожидание завершения 1 потока");
+                                JOptionPane.showMessageDialog(window, "Ждем, пока отработает 1 поток");
+                                t1.join();
+                                JOptionPane.showMessageDialog(window, "1 поток отработал, пробуем запустить 2 поток");
+                            } catch (InterruptedException ex) {
+                                log.fatal("Join doesn't work");
+                                ex.printStackTrace();
+                            }
+                        }
+                        if (model.getRowCount() != 0) {
+                            if (dataEmploy.getSelectedRow() != -1) {
+                                 JOptionPane.showMessageDialog(null,"2 поток запущен");
+                                 dialog = new EditDialogEmploy(window, employs.this, "Редактирование");
+                                 dialog.setVisible(true);
+                                 try {
+                                      Thread.sleep(5000);
 
-                        } catch (InterruptedException ex) {
-                            ex.printStackTrace();
+                                 } catch (InterruptedException ex) {
+                                      ex.printStackTrace();
+                                 }
+                            } else {
+                                log.error("Не выбрана строка");
+                                JOptionPane.showMessageDialog(null, "Не выбрана строка. Нечего редактировать");
+                            }
+                        } else {
+                            log.error("В данном окне нет записей");
+                            JOptionPane.showMessageDialog(null, "В данном окне нет записей. Нечего редактировать");
                         }
                     });
                     t2.start();
-                } else {
-                    log.error("Не выбрана строка");
-                    JOptionPane.showMessageDialog(null, "Не выбрана строка. Нечего редактировать");
-                }
-            } else {
-                log.error("В данном окне нет записей");
-                JOptionPane.showMessageDialog(null, "В данном окне нет записей. Нечего редактировать");
-            }
+
         });
         edit.setMnemonic(KeyEvent.VK_E);
 
         save.addActionListener((e) -> {
             log.debug("Старт Save listener");
-            if (t2.isAlive()) {
-                try {
-                    JOptionPane.showMessageDialog(window, "Ждем, пока отработает 2 поток");
-                    t2.join();
-                    JOptionPane.showMessageDialog(window, "2 поток отработал");
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
+            t3 = new Thread(() -> {
+                if (t2.isAlive()) {
+                    try {
+                        JOptionPane.showMessageDialog(window, "Ждем, пока отработает 2 поток");
+                        t2.join();
+                        JOptionPane.showMessageDialog(window, "2 поток отработал");
+                    } catch (InterruptedException ex) {
+                        ex.printStackTrace();
+                    }
                 }
-            }
-            if (model.getRowCount() != 0) {
-                t3 = new Thread(() -> {
+                if (model.getRowCount() != 0) {
                     JOptionPane.showMessageDialog(null, "3 поток создает отчет");
                     try {
                         Thread.sleep(5000);
@@ -516,18 +517,9 @@ public class employs {
                         ex.printStackTrace();
                     }
                     print("dataEmploy.xml", "window/dataEmploy", "Cherry.jrxml", "otchet.html");
-                });
-                t3.start();
-            }
-
-            //makeXml();
-            // print("dataEmploy.xml","window/dataEmploy","Cherry.jrxml","otchet.html");
-                /*
-               try{ checkList();}
-               catch (MyException myEx){
-                   JOptionPane.showMessageDialog(null,myEx.getMessage());
-               }
-               */
+                }
+            });
+            t3.start();
         });
 
         folder.addActionListener((e) -> {
@@ -546,12 +538,6 @@ public class employs {
                 });
             });
             t1.start();
-
-            //loadXML();
-                /*
-                read("file.csv");
-                JOptionPane.showMessageDialog(window, "Данные загружены из файла file.csv");
-                */
         });
 
         search.addActionListener((e) -> {
