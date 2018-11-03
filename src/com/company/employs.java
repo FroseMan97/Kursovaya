@@ -2,10 +2,11 @@ package com.company;
 
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRXmlDataSource;
-import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import org.apache.log4j.Logger;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
+
 
 import javax.swing.*;
 import javax.swing.table.*;
@@ -105,6 +106,8 @@ public class employs {
      */
     Thread t3 = new Thread();
 
+    final static public Object shared=new Object();
+
     /**
      * Скролл
      */
@@ -134,9 +137,9 @@ public class employs {
             // Заполнение отчета данными
             JasperPrint print = JasperFillManager.fillReport(report, null, jr);
             //JasperExportManager.exportReportToHtmlFile(print,resultpath);
-            if(resultpath.toLowerCase().endsWith("docx")) {
+            if(resultpath.toLowerCase().endsWith("pdf")) {
                 JRExporter exporter;
-                exporter = new JRDocxExporter();
+                exporter = new JRPdfExporter();
                 exporter.setParameter(JRExporterParameter.OUTPUT_FILE_NAME,resultpath);
                 exporter.setParameter(JRExporterParameter.JASPER_PRINT,print);
                 exporter.exportReport();
@@ -516,7 +519,7 @@ public class employs {
                     } catch (InterruptedException ex) {
                         ex.printStackTrace();
                     }
-                    print("dataEmploy.xml", "window/dataEmploy", "Cherry.jrxml", "otchet.html");
+                    print("dataEmploy.xml", "window/dataEmploy", "Cherry.jrxml", "otchet.pdf");
                 }
             });
             t3.start();
@@ -557,6 +560,71 @@ public class employs {
                 dataEmploy.setRowSorter(sorter);
             }
         });
+
+        print.addActionListener((e)-> {
+            class myThread extends Thread{
+                private int type;
+                public myThread(int i) {
+                    type=i;
+                }
+
+                public void run() {
+
+                    if (type==1) {
+                        synchronized (shared) {
+                            try {
+                                shared.wait();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            try {
+
+                                loadXML();
+                                dataEmploy.setRowSelectionInterval(0,0);
+
+                            } catch (Exception e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                    }
+
+                    if (type==2) {
+                        synchronized (shared) {
+                            shared.notifyAll();
+                            try {
+                                shared.wait();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            dialog = new EditDialogEmploy(window, employs.this, "Редактирование");
+                            dialog.setVisible(true);
+
+                            shared.notifyAll();
+                        }
+                    }
+
+                    if (type==3) {
+                        synchronized (shared) {
+                            shared.notifyAll();
+                            try {
+                                shared.wait();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            print("dataEmploy.xml", "window/dataEmploy", "Cherry.jrxml", "otchet.pdf");
+
+                        }
+                    }
+                }
+            }
+            new myThread(1).start();
+            new myThread(2).start();
+            new myThread(3).start();
+        });
+
 
         // Если не выделена строка, то прячем кнопки
         dataEmploy.getSelectionModel().addListSelectionListener((e) -> {

@@ -12,7 +12,7 @@ public class employsTest {
      */
     @Test
     public void print() {
-        //employs.print(null,null,null,null);
+        employs.print(null,null,null,null);
         //employs.print("dataEmploy.xml", "window/dataEmploy", "Cherry.jrxml", "otchet.html");
     }
 
