@@ -12,8 +12,7 @@ public class EditDialogProd extends DialogProd {
         parent.dataProducts.setValueAt(country.getText(), row, 1);
         parent.dataProducts.setValueAt(weight.getText(), row, 2);
         parent.dataProducts.setValueAt(price.getText(), row, 3);
-        parent.makeXml();
-        SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(null, "2 поток закончил работу, данные сохранены"));
+        //parent.makeXml();
     }
 
     @Override
@@ -25,8 +24,8 @@ public class EditDialogProd extends DialogProd {
         price = new JTextField(parent.dataProducts.getValueAt(row, 3).toString(), 20);
         checker(0,name);
         checker(1,country);
-        checker(2,weight);
-        checker(3,price);
+        checkerInt(2,weight);
+        checkerInt(3,price);
     }
 
     public EditDialogProd(JFrame owner, products parent, String title){

@@ -185,3 +185,168 @@
 [WARN ] 2018-11-03 00:08:23 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
 [INFO ] 2018-11-03 00:08:23 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
 [WARN ] 2018-11-03 00:08:32 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 13:30:45 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 13:30:48 [AWT-EventQueue-0] employs, 529 - Старт Folder listener
+[WARN ] 2018-11-03 13:30:53 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 13:36:31 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 13:36:32 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 13:57:27 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 13:57:28 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[DEBUG] 2018-11-03 13:57:32 [Thread-4] EditDialogEmploy, 29 - Старт метода Init
+[DEBUG] 2018-11-03 13:57:37 [AWT-EventQueue-0] EditDialogEmploy, 15 - Старт метода progress
+[WARN ] 2018-11-03 13:57:37 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
+[INFO ] 2018-11-03 13:57:37 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
+[WARN ] 2018-11-03 13:57:44 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:04:11 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 14:04:12 [AWT-EventQueue-0] employs, 529 - Старт Folder listener
+[DEBUG] 2018-11-03 14:04:21 [Thread-6] EditDialogEmploy, 29 - Старт метода Init
+[WARN ] 2018-11-03 14:04:34 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:06:55 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 14:07:10 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:07:31 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[DEBUG] 2018-11-03 14:07:32 [Thread-4] EditDialogEmploy, 29 - Старт метода Init
+[WARN ] 2018-11-03 14:07:40 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:08:12 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[DEBUG] 2018-11-03 14:08:16 [Thread-4] EditDialogEmploy, 29 - Старт метода Init
+[DEBUG] 2018-11-03 14:08:21 [AWT-EventQueue-0] EditDialogEmploy, 15 - Старт метода progress
+[WARN ] 2018-11-03 14:08:21 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
+[INFO ] 2018-11-03 14:08:21 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
+[WARN ] 2018-11-03 14:08:28 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:25:29 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 14:25:34 [AWT-EventQueue-0] employs, 529 - Старт Folder listener
+[DEBUG] 2018-11-03 14:25:42 [Thread-10] EditDialogEmploy, 29 - Старт метода Init
+[DEBUG] 2018-11-03 14:26:02 [AWT-EventQueue-0] EditDialogEmploy, 15 - Старт метода progress
+[WARN ] 2018-11-03 14:26:02 [AWT-EventQueue-0] EditDialogEmploy, 18 - Попытка изменить запись Лазарев Сергей Директор
+[INFO ] 2018-11-03 14:26:02 [AWT-EventQueue-0] EditDialogEmploy, 22 - Заменена на Лазарев Сергей Директор
+[WARN ] 2018-11-03 14:26:26 [AWT-EventQueue-0] employs, 529 - Старт Folder listener
+[WARN ] 2018-11-03 14:26:29 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-03 14:34:27 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-03 14:34:28 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 17:03:23 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[DEBUG] 2018-11-07 17:03:31 [AWT-EventQueue-0] AddDialogEmploy, 28 - Старт метода init
+[WARN ] 2018-11-07 17:03:33 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 17:28:14 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-07 17:28:15 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 17:44:46 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-07 17:45:11 [AWT-EventQueue-0] employs, 529 - Старт Folder listener
+[WARN ] 2018-11-07 17:46:25 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 21:53:45 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-07 21:53:46 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 22:37:07 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[DEBUG] 2018-11-07 22:37:08 [AWT-EventQueue-0] AddDialogEmploy, 28 - Старт метода init
+[WARN ] 2018-11-07 22:37:10 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 22:59:36 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-07 22:59:37 [AWT-EventQueue-0] employs, 434 - Закрытие приложения
+[WARN ] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 305 - Старт App.show
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 306 - Создание окна приложения
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 312 - Создание кнопок и прикрепление иконок
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 328 - Добавление кнопок на панель инструментов
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 337 - Размещение панели инструментов
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 341 - Создание таблицы с данными
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 371 - Подготовка компонентов поиска
+[DEBUG] 2018-11-07 23:02:11 [AWT-EventQueue-0] employs, 396 - Старт Add listener
+[WARN ] 2018-11-07 23:02:12 [AWT-EventQueue-0] employs, 434 - Закрытие приложения

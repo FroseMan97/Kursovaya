@@ -11,7 +11,7 @@ public class AddDialogProd extends DialogProd {
         setVisible(false);
         String[] arr = {name.getText(),country.getText(),weight.getText(),price.getText()};
         parent.addR(arr);
-        JOptionPane.showMessageDialog(null, "Вы добавили сотрудника \""+arr[0]+" "+arr[1]+"\"");
+        JOptionPane.showMessageDialog(null, "Вы добавили товар \""+arr[0]+" из "+arr[1]+"\"");
     }
 
     @Override

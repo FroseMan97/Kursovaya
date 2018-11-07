@@ -72,12 +72,12 @@ public abstract class DialogProd extends JDialog {
         weight.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                checker(2,weight);
+                checkerInt(2,weight);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                checker(2,weight);
+                checkerInt(2,weight);
             }
 
             @Override
@@ -88,12 +88,12 @@ public abstract class DialogProd extends JDialog {
         price.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                checker(3,price);
+                checkerInt(3,price);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                checker(3,price);
+                checkerInt(3,price);
             }
 
             @Override
@@ -137,20 +137,34 @@ public abstract class DialogProd extends JDialog {
     }
 
     protected void checker(int i, JTextField field){
-        Pattern r = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,10}$");
-        Pattern c = Pattern.compile("^[+-]?(([1-9][0-9]*)|(0))([.,][0-9]+)?$");
-        Matcher rm = c.matcher(field.getText());
-        if(i==3 | i==4) {
-            rm = c.matcher(field.getText());
-        }
-
-        if (rm.matches()) {
-            field.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+        Pattern b = Pattern.compile("^[А-ЯЁ][а-яЁё]{1,10}$");
+        Matcher rr = b.matcher(field.getText());
+        Color color = Color.GREEN;
+        if (rr.matches()) {
             check[i] = true;
         } else {
-            field.setBorder(BorderFactory.createLineBorder(Color.RED));
+            color = Color.RED;
             check[i] = false;
         }
+        field.setBorder(BorderFactory.createLineBorder(color));
+
+        if (check[0] && check[1] && check[2] && check[3])
+            ok.setEnabled(true);
+        else
+            ok.setEnabled(false);
+    }
+
+    protected void checkerInt(int i, JTextField field){
+        Pattern c = Pattern.compile("^[+-]?(([1-9][0-9]*)|(0))([.,][0-9]+)?$");
+        Matcher rm = c.matcher(field.getText());
+        Color color = Color.GREEN;
+        if (rm.matches()) {
+            check[i] = true;
+        } else {
+            color = Color.RED;
+            check[i] = false;
+        }
+        field.setBorder(BorderFactory.createLineBorder(color));
 
         if (check[0] && check[1] && check[2] && check[3])
             ok.setEnabled(true);

@@ -19,7 +19,7 @@ import java.awt.event.KeyEvent;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class products {
+public class report {
 
     protected void makeXml() {
         try {
@@ -32,18 +32,16 @@ public class products {
             doc.appendChild(window);
             // Создание дочерних элементов dataEmploy и присвоение значений атрибутам
             for (int i = 0; i < model.getRowCount(); i++) {
-                Element dataEmploy = doc.createElement("dataProducts");
+                Element dataEmploy = doc.createElement("dataReport");
                 window.appendChild(dataEmploy);
                 dataEmploy.setAttribute("name", (String) model.getValueAt(i, 0));
-                dataEmploy.setAttribute("country", (String) model.getValueAt(i, 1));
-                dataEmploy.setAttribute("weight", (String) model.getValueAt(i, 2));
-                dataEmploy.setAttribute("price", (String) model.getValueAt(i, 2));
+                dataEmploy.setAttribute("kolvo", (String) model.getValueAt(i, 1));
             }
             try {
                 // Создание преобразователя документа
                 Transformer trans = TransformerFactory.newInstance().newTransformer();
                 // Создание файла с именем dataEmploy.xml для записи документа
-                java.io.FileWriter fw = new FileWriter("dataProducts.xml");
+                java.io.FileWriter fw = new FileWriter("dataReport.xml");
                 // Запись документа в файл
                 trans.transform(new DOMSource(doc), new StreamResult(fw));
             } catch (TransformerConfigurationException e) {
@@ -73,21 +71,19 @@ public class products {
                 doc = dBuilder.parse(fileChooser.getSelectedFile());
                 // Нормализация документа
                 doc.getDocumentElement().normalize();
-                // Получение списка элементов с именем dataProducts
-                NodeList nldataProducts = doc.getElementsByTagName("dataProducts");
+                // Получение списка элементов с именем dataReport***
+                NodeList nldataReport = doc.getElementsByTagName("dataReport");
                 // Цикл просмотра списка элемента и запись данных в таблицу
-                for (int temp = 0; temp < nldataProducts.getLength(); temp++) {
+                for (int temp = 0; temp < nldataReport.getLength(); temp++) {
                     // Выбор очередного элемента списка
-                    Node elem = nldataProducts.item(temp);
+                    Node elem = nldataReport.item(temp);
                     // Получение списка атрибутов документа
                     NamedNodeMap attrs = elem.getAttributes();
                     // Чтение атрибутов элемента
                     String name = attrs.getNamedItem("name").getNodeValue();
-                    String country = attrs.getNamedItem("country").getNodeValue();
-                    String weight = attrs.getNamedItem("weight").getNodeValue();
-                    String price = attrs.getNamedItem("price").getNodeValue();
+                    String kolvo = attrs.getNamedItem("kolvo").getNodeValue();
                     // Запись данных в таблицу
-                    model.addRow(new String[]{name, country, weight, price});
+                    model.addRow(new String[]{name, kolvo});
                 }
             }
             else
@@ -99,7 +95,7 @@ public class products {
         catch (IOException e){e.printStackTrace();}
     }
 
-    products(){
+    report(){
         show();
     }
 
@@ -142,7 +138,7 @@ public class products {
     /**
      * Таблица
      */
-    protected JTable dataProducts;
+    public JTable dataReport;
     /**
      * Выпадающий список
      */
@@ -160,15 +156,15 @@ public class products {
      */
     private JScrollPane scroll;
 
-    private AddDialogProd addDialogProd;
-    private EditDialogProd editDialogProd;
+    private AddDialogReport addDialogReport;
+    private EditDialogReport editDialogReport;
 
     Thread t1 = new Thread();
     Thread t2 = new Thread();
     Thread t3 = new Thread();
 
     public void show(){
-        window = new JFrame("Список продуктов");
+        window = new JFrame("Отчет о состоянии магазина");
         window.setSize(1000,500);
         window.setLocation(310,130);
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -186,7 +182,7 @@ public class products {
         edit.setToolTipText("Изменить информацию о товаре");
         save.setToolTipText("Сохранить информацию о товарах");
         folder.setToolTipText("Загрузить информацию о товарах");
-        print.setToolTipText("Распечатать информацию о товарах");
+        print.setToolTipText("Распечатать отчет");
         // Добавление кнопок на панель инструментов
         toolBar = new JToolBar("Панель инструментов");
         toolBar.add(add);
@@ -199,7 +195,7 @@ public class products {
         window.setLayout(new BorderLayout());
         window.add(toolBar,BorderLayout.NORTH);
         // Создание таблицы с данными
-        String[] columns = {"Название", "Страна производства", "Вес", "Цена"};
+        String[] columns = {"Название", "Количество"};
 
         // Настройка таблицы
         model = new DefaultTableModel(columns,0){
@@ -207,13 +203,13 @@ public class products {
             {
                 return false;
             }};
-        this.dataProducts = new JTable(model);
-        dataProducts.setFont(new Font(Font.SERIF,Font.BOLD,14));
-        dataProducts.setIntercellSpacing(new Dimension(0,1));
-        dataProducts.setRowHeight(dataProducts.getRowHeight()+10);
-        dataProducts.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        this.dataReport = new JTable(model);
+        dataReport.setFont(new Font(Font.SERIF,Font.BOLD,14));
+        dataReport.setIntercellSpacing(new Dimension(0,1));
+        dataReport.setRowHeight(dataReport.getRowHeight()+10);
+        dataReport.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
-        dataProducts.setDefaultRenderer(dataProducts.getColumnClass(1), new DefaultTableCellRenderer(){
+        dataReport.setDefaultRenderer(dataReport.getColumnClass(1), new DefaultTableCellRenderer(){
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
                 super.setHorizontalAlignment(SwingConstants.CENTER);
                 super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
@@ -222,12 +218,12 @@ public class products {
 
         });
 
-        scroll = new JScrollPane(this.dataProducts);
+        scroll = new JScrollPane(this.dataReport);
 
         // Размещение таблицы с данными
         window.add(scroll,BorderLayout.CENTER);
         // Подготовка компонентов поиска
-        comboBox = new JComboBox(new String[]{"Фамилия", "Имя", "Должность"});
+        comboBox = new JComboBox(new String[]{"Название", "Количество"});
         textSearch = new JTextField();
         textSearch.setColumns(20);
         search = new JButton("Поиск");
@@ -248,16 +244,16 @@ public class products {
         window.add(searchPanel,BorderLayout.SOUTH);
 
         add.addActionListener((e) -> {
-            addDialogProd = new AddDialogProd(window, products.this, "Добавление записи");
-            addDialogProd.setVisible(true);
+            addDialogReport = new AddDialogReport(window, report.this, "Добавление записи");
+            addDialogReport.setVisible(true);
         });
 
         add.setMnemonic(KeyEvent.VK_A);
         delete.addActionListener((e) -> {
-            if (dataProducts.getRowCount() > 0) {
-                if (dataProducts.getSelectedRow() != -1) {
+            if (dataReport.getRowCount() > 0) {
+                if (dataReport.getSelectedRow() != -1) {
                     try {
-                        model.removeRow(dataProducts.convertRowIndexToModel(dataProducts.getSelectedRow()));
+                        model.removeRow(dataReport.convertRowIndexToModel(dataReport.getSelectedRow()));
                         JOptionPane.showMessageDialog(window, "Вы удалили строку");
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Ошибка");
@@ -283,11 +279,11 @@ public class products {
                 }
             }
             if (model.getRowCount() != 0) {
-                if (dataProducts.getSelectedRow() != -1) {
+                if (dataReport.getSelectedRow() != -1) {
                     t2 = new Thread(() -> {
-                        JOptionPane.showMessageDialog(null,"2 поток запущен");
-                        editDialogProd = new EditDialogProd(window, products.this, "Редактирование");
-                        editDialogProd.setVisible(true);
+                        //JOptionPane.showMessageDialog(null,"2 поток запущен");
+                        editDialogReport = new EditDialogReport(window, report.this, "Редактирование");
+                        editDialogReport.setVisible(true);
                     });
                     t2.start();
                 } else {
@@ -318,9 +314,9 @@ public class products {
         folder.addActionListener((e) -> {
             t1 = new Thread(() -> {
                 loadXML();
-                dataProducts.setRowSelectionInterval(0,0);
+                dataReport.setRowSelectionInterval(0,0);
                 SwingUtilities.invokeLater(() -> {
-                    JOptionPane.showMessageDialog(window, "1 поток закончил работу.");
+                    //JOptionPane.showMessageDialog(window, "1 поток закончил работу.");
                 });
             });
             t1.start();
@@ -337,20 +333,20 @@ public class products {
                     }
                 });
                 sorter.setRowFilter(RowFilter.regexFilter("(?i)" + textSearch.getText().toLowerCase()));
-                dataProducts.setRowSorter(sorter);
+                dataReport.setRowSorter(sorter);
             }
         });
 
         print.addActionListener((e)->{
             if (model.getRowCount() != 0) {
-                employs.print("dataProducts.xml", "window/dataProducts", "prod.jrxml", "otchetProd.pdf");
+                employs.print("dataReport.xml", "window/dataReport", "report.jrxml", "otchetReport.pdf");
             }
         });
 
         // Если не выделена строка, то прячем кнопки
-        dataProducts.getSelectionModel().addListSelectionListener((e) -> {
+        dataReport.getSelectionModel().addListSelectionListener((e) -> {
             Boolean check = true;
-            if (dataProducts.getSelectionModel().isSelectionEmpty()) {
+            if (dataReport.getSelectionModel().isSelectionEmpty()) {
                 check = false;
             }
             edit.setVisible(check);
@@ -362,5 +358,6 @@ public class products {
     public void addR(String[] arr){
         model.addRow(arr);
     }
+
 
 }
