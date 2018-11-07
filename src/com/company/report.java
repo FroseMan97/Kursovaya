@@ -340,6 +340,7 @@ public class report {
         print.addActionListener((e)->{
             if (model.getRowCount() != 0) {
                 employs.print("dataReport.xml", "window/dataReport", "report.jrxml", "otchetReport.pdf");
+                //
             }
         });
 
